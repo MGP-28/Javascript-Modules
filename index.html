@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 05</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-teal-900 flex justify-center">
+    <div class="w-11/12 xl:w-3/4">
+        <div id="formDiv" class="pt-5 w-full max-w-2xl">
+            <form method="post" id="form">
+                <div class="flex flex-col gap-y-2 mb-2">
+                    <label for="name" class="text-white">Name</label>
+                    <input type="text" id="name" name="name" class="p-1 rounded-sm">   
+                </div>
+                <div class="flex flex-col gap-y-2 mb-2">
+                    <label for="name" class="text-white">Age</label>
+                    <input type="text" id="age" name="age" class="p-1 rounded-sm">
+                </div>
+                <div class="flex justify-between">
+                    <button type="submit" value="submit" id="submitButton" class="hover:bg-white hover:text-black bg-teal-800 border mt-2 px-5 py-3 text-white shadow-xl rounded-md">Submit</button>
+                    <button type="button" id="restoreButton" class="hover:bg-gray-500 hover:text-red-900 bg-gray-700 border mt-2 px-5 py-3 text-white shadow-xl rounded-md">Restore</button>
+                </div>
+            </form>
+        </div>
+        <div id="peopleListDiv" class="pt-5 w-full">
+            <table id="table" class="table-fixed text-white border border-black rounded-md w-full hidden">
+                <colgroup>
+                    <col class="w-16"> <!--button column-->
+                    <col class="w-auto sm:w-4/5"> <!--name column-->
+                    <col class="w-2/12 sm:w-auto"> <!--age column-->
+                </colgroup>
+                <thead id="tableHeader" class="text-left bg-black h-10">
+                    <th></th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </thead>
+                <tbody id="peopleList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
